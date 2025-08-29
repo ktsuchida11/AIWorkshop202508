@@ -1,0 +1,15 @@
+{
+    "mcpServers": {
+        "stock": {
+            "command": "python",
+            "args": ["yfinance_server.py"],
+            "transport": "stdio"
+        },
+        "time": {
+            "command": "docker",
+            "args": ["run", "-i", "--rm", "mcp/time"],
+            "transport": "stdio"
+        }
+        
+    }
+}
