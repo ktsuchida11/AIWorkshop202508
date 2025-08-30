@@ -1,4 +1,4 @@
-### 制限事項
+## 制限事項
 
 動かすためには以下のキーの入手が必要です
 
@@ -11,7 +11,7 @@ LANGFUSE＿XXXX
 long term memoryの動作を利用しない場合はpg vecotrは必要ありません
 long term memoryを動かす場合は、composeの内容と.envの内容を確認してpg vectorを作成して下さい
 
-### アプリモード
+## アプリモード
 
 #### baseモード
 supervisorで単純なマルチエージェントを構築
@@ -28,13 +28,21 @@ MCPサーバをsupervisorのマルチエージェントで利用す設定にさ�
 #### memory longモード
 MCPサーバをsupervisorのマルチエージェントで利用す設定にさらに不揮発性の会話の大事なところだけ保存する記憶を追加
 
-### アプリ実行 
+## アプリ実行 
+
+```
 uv run streamlit run ./superviser.py 
+```
 
-### pg vector　作成
-docker compose up -d
+## モード切り替え
 
-### mcp server
+ソースコードのmain関数内のmode変数の値を変える
+
+## ローカルツール
+
+現在時刻を返す
+
+## mcp server
 
 - Time MCP Server
 時間とタイムゾーンの変換機能を提供するモデル コンテキスト プロトコル サーバー。
@@ -43,3 +51,11 @@ docker compose up -d
 - Chroma MCP Server
 このサーバーは Chroma を利用したデータ取得機能を提供し、AI モデルが生成されたデータとユーザー入力に基づいてコレクションを作成し、
 ベクトル検索、全文検索、メタデータ フィルタリングなどを使用してそのデータを取得できるようにします。
+
+## pg vector　作成
+
+```
+docker compose up -d
+```
+
+
