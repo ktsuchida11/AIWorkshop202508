@@ -1,5 +1,32 @@
+### 制限事項
 
+動かすためには以下のキーの入手が必要です
 
+OPEN_API_KEY
+TAVILY_KEY
+
+langfuseはなくても動きます
+LANGFUSE＿XXXX
+
+long term memoryの動作を利用しない場合はpg vecotrは必要ありません
+long term memoryを動かす場合は、composeの内容と.envの内容を確認してpg vectorを作成して下さい
+
+### アプリモード
+
+#### baseモード
+supervisorで単純なマルチエージェントを構築
+
+#### toolsモード
+ローカルツールをsupervisorのマルチエージェントで利用する設定を追加
+
+#### mcpモード
+MCPサーバをsupervisorのマルチエージェントで利用する設定を追加
+
+#### memory shortモード
+MCPサーバをsupervisorのマルチエージェントで利用す設定にさらに揮発性の会話の大事なところだけ保存する記憶を追加
+
+#### memory longモード
+MCPサーバをsupervisorのマルチエージェントで利用す設定にさらに不揮発性の会話の大事なところだけ保存する記憶を追加
 
 ### アプリ実行 
 uv run streamlit run ./superviser.py 
