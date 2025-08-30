@@ -15,6 +15,8 @@ LANGFUSE＿XXXX
 long term memoryの動作を利用しない場合はpg vecotrは必要ありません
 long term memoryを動かす場合は、composeの内容と.envの内容を確認してpg vectorを作成して下さい
 
+.env_sampleをもとに.envファイルを作成して下さい
+
 ## アプリモード
 
 #### baseモード
